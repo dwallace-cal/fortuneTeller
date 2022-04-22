@@ -67,7 +67,9 @@
       "**/hardhat-ts/**"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.5.2"
+  },
   "devDependencies": {
     "husky": "^7.0.2"
   }

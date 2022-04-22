@@ -6,7 +6,7 @@
 
 🎲 Verifiable Randomness with Chainlink VRF 🎲
 
-
+![Aavegotchi](https://www.aavegotchi.com/img/brand/sun.png "Aavegotchi")
 
 # 🏄‍♂️ Quick Start
 
