@@ -1,6 +1,6 @@
-# 🏗 Scaffold-ETH
+# 🏗 Scaffold-ETH/fortuneTeller
 
-> MVP prototype for Aavegotchi FortuneTeller NPC! 🚀
+🚀 MVP prototype for Aavegotchi FortuneTeller NPC! 🚀
 
 🧪 Developed during #Chainlink Spring 2022 Hackathon 🧪
 
@@ -8,7 +8,11 @@
 
 ![Aavegotchi](https://www.aavegotchi.com/img/brand/sun.png "Aavegotchi")
 
-# 🏄‍♂️ Quick Start
+# 📚 Documentation:
+    For use by Our P2E Guild, to provide guild content in-game. Designed to have upgradable contracts to change mappings. Decentralized, server-less front end saved to IPFS.
+
+
+# 🏄‍♂️ Quick Start:
 
 Prerequisites: [Node](https://nodejs.org/en/download/) plus [Yarn](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/downloads)
 
@@ -48,7 +52,7 @@ yarn deploy
 
 📱 Open http://localhost:3000 to see the app
 
-# 📚 Documentation:
+
 
 # 🛠 Buidl
 
