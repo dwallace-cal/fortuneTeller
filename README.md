@@ -7,9 +7,10 @@
 🎲 Verifiable Randomness with Chainlink VRF 🎲
 
 ![Aavegotchi](https://www.aavegotchi.com/img/brand/sun.png "Aavegotchi")
+![ChainLink](https://docs.chain.link/files/a4c6c80-85d09b6-19facd8-banner.png)
 
 # 📚 Documentation:
-    For use by Our P2E Guild, to provide guild content in-game. Designed to have upgradable contracts to change mappings. Decentralized, server-less front end saved to IPFS.
+For use by Our P2E Guild, to provide guild content in-game. Designed to have upgradable contracts to change mappings. Decentralized, server-less front end saved to IPFS.
 
 
 # 🏄‍♂️ Quick Start:
