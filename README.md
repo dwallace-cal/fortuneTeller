@@ -10,7 +10,7 @@
 ![ChainLink](https://docs.chain.link/files/a4c6c80-85d09b6-19facd8-banner.png)
 
 # 📚 Documentation:
-For use by Our P2E Guild, to provide guild content in-game. Designed to have upgradable contracts to update fortunes. Decentralized, server-less front end saved to IPFS. second phase will include use of price oracle to influence fortunes.
+For use by our esports Guild, to provide guild content in-game. Designed to be upgradable in order to update fortunes based on current, in-game events. Decentralized, server-less front-end to be hosted on IPFS. second phase will include use of price oracle to influence fortunes. adaptabable, for future use cases such as to mint collectable ERC1155's for raffles or lottery. Accepts the utility tokens of Aaveotchi, called Alchemica. ($KEK, $ALPHA, $FOMO, $FUD)
 
 
 # 🏄‍♂️ Quick Start:
@@ -61,7 +61,3 @@ yarn deploy
 # 💌 P.S.
 
 🌍 You need an RPC key for testnets and production deployments, create an [Alchemy](https://www.alchemy.com/) account and replace the value of `ALCHEMY_KEY = xxx` in `packages/react-app/src/constants.js` with your new key.
-
-### Automated with Gitpod
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/scaffold-eth/scaffold-eth)
