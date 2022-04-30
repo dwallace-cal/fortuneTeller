@@ -10,7 +10,7 @@
 ![ChainLink](https://docs.chain.link/files/a4c6c80-85d09b6-19facd8-banner.png)
 
 # 📚 Documentation:
-For use by our esports Guild, to provide guild content in-game, such as side-quests, through NPC's on guild lands. Designed to be upgradable in order to update fortunes based on current, in-game events. Decentralized, server-less front-end to be hosted on IPFS. second phase will include use of price oracle to influence fortunes. adaptabable, for future use cases such as to mint collectable ERC1155's for raffles or lottery. Accepts the utility tokens of Aavegotchi, called Alchemica. ($KEK, $ALPHA, $FOMO, $FUD)
+For use by our esports Guild, to provide guild content in-game, such as side-quests, through NPCs on guild lands. Designed to be upgradable in order to update fortunes based on current, in-game events. Decentralized, server-less front-end to be hosted on IPFS. second phase will include use of price oracle to influence fortunes. adaptabable, for future use cases such as to mint collectable ERC1155's for raffles or lottery. Accepts the utility tokens of Aavegotchi, called Alchemica. ($KEK, $ALPHA, $FOMO, $FUD)
 
 
 # 🏄‍♂️ Quick Start:

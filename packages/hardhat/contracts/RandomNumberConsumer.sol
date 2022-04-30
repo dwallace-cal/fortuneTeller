@@ -17,16 +17,13 @@ import '@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol';
      * Key Hash: 0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4
      */
      /**
-     * Constructor inherits VRFConsumerBase
      * 
      * Network: Mumbai
      * Chainlink VRF Coordinator address: 0x8C7382F9D8f56b33781fE506E897a4F1e2d17255
      * LINK token address:                0x326C977E6efc84E512bB9C30f76E30c160eD06FB
      * Key Hash: 0x6e75b569a01ef56d18cab6a8e71e6600d6ce853834d4a5748b720d06f878b3a4
-     */
-
-     /**
-     * Constructor inherits VRFConsumerBase
+     *
+     *
      * 
      * Network: Matic Mainnet
      * Chainlink VRF Coordinator address: 0x3d2341ADb2D31f1c5530cDC622016af293177AE0
@@ -97,7 +94,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
      * @param roller address of the roller
      */
     function rollDice(address roller) public onlyOwner returns (uint256 requestId) { //remove onlyOwner to allow public calls from others, if desired
-        require(s_results[roller] == 0, 'Already rolled'); //delete to allow reroll
+        require(s_results[roller] == 0, 'Already rolled'); //delete to allow reroll?
         // Will revert if subscription is not set and funded.
         requestId = COORDINATOR.requestRandomWords(
             s_keyHash,
@@ -138,7 +135,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
      */
     function house(address player) public view returns (string memory) {
         require(s_results[player] != 0, 'Dice not rolled');
-        require(s_results[player] != ROLL_IN_PROGRESS, 'Roll in progress');  //change to allow multiple rolls
+        require(s_results[player] != ROLL_IN_PROGRESS, 'Roll in progress');  //change to allow multiple rolls?
         return getHouseName(s_results[player]);
     }
 
