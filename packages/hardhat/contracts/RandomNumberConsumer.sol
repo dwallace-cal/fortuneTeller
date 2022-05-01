@@ -9,14 +9,6 @@ import '@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol';
  * of a 20 sided dice
  */
  /**
-     * Constructor inherits VRFConsumerBase
-     * 
-     * Network: Kovan
-     * Chainlink VRF Coordinator address: 0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9
-     * LINK token address:                0xa36085F69e2889c224210F603D836748e7dC0088
-     * Key Hash: 0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4
-     */
-     /**
      * 
      * Network: Mumbai
      * Chainlink VRF Coordinator address: 0x8C7382F9D8f56b33781fE506E897a4F1e2d17255
@@ -69,6 +61,17 @@ contract VRFD20 is VRFConsumerBaseV2 {
     // map vrf results to rollers
     mapping(address => uint256) private s_results;
 
+    // map vrf results to FUD rollers
+    mapping(address => uint256) private s_FUDresults;
+    // map vrf results to FOMO rollers
+    mapping(address => uint256) private s_FOMOresults;
+    // map vrf results to ALPHA rollers
+    mapping(address => uint256) private s_ALPHAresults;
+    // map vrf results to KEK rollers
+    mapping(address => uint256) private s_KEKresults;
+    // map vrf results to GLTR rollers when live**
+    //mapping(address => uint256) private s_GLTRresults;
+
     event DiceRolled(uint256 indexed requestId, address indexed roller);
     event DiceLanded(uint256 indexed requestId, uint256 indexed result);
 
@@ -81,7 +84,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
      */
     constructor(uint64 subscriptionId) VRFConsumerBaseV2(vrfCoordinator) {
         COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
-        s_owner = msg.sender;
+        s_owner = msg.sender; //hardcode proxy
         s_subscriptionId = subscriptionId;
     }
 
@@ -146,7 +149,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
      */
     function getFortuneFUD(uint256 id) private pure returns (string memory) {
         string[20] memory houseNames = [
-            '$...$FUD?...NGMI....',
+            '$...$FUD?...NGMI....', 
             'Lannister',
             'Stark',
             'Tyrell',
@@ -176,7 +179,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
      */
     function getFortuneFOMO(uint256 id) private pure returns (string memory) {
         string[20] memory houseNames = [
-            'Targaryen',
+            'do not FOMO into the grid alone, or else be lickquidated',
             'Lannister',
             'Stark',
             'Tyrell',
@@ -206,7 +209,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
      */
     function getFortuneALPHA(uint256 id) private pure returns (string memory) {
         string[20] memory houseNames = [
-            'Targaryen',
+            'Its Alpha that you seek...',
             'Lannister',
             'Stark',
             'Tyrell',
@@ -237,7 +240,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
     function getFortuneKEK(uint256 id) private pure returns (string memory) {
         string[20] memory houseNames = [
             'You fren, GMI',
-            'Lannister',
+            'If you can handle the grid, the spillover is yours',
             'Stark',
             'Tyrell',
             'Baratheon',
@@ -258,7 +261,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
             'Karstark'
         ];
         return houseNames[id - 1];
-    }
+    } // Repeat for $GLTR when live** 
     function getHouseName(uint256 id) private pure returns (string memory) {
         string[20] memory houseNames = [
             'Targaryen',
