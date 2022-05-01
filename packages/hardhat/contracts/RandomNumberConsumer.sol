@@ -140,10 +140,125 @@ contract VRFD20 is VRFConsumerBaseV2 {
     }
 
     /**
-     * @notice Get the house namne from the id
+     * @notice Get the fortune for players that input FUD
      * @param id uint256
-     * @return house name string
+     * @return fortune string
      */
+    function getFortuneFUD(uint256 id) private pure returns (string memory) {
+        string[20] memory houseNames = [
+            '$...$FUD?...NGMI....',
+            'Lannister',
+            'Stark',
+            'Tyrell',
+            'Baratheon',
+            'Martell',
+            'Tully',
+            'Bolton',
+            'Greyjoy',
+            'Arryn',
+            'Frey',
+            'Mormont',
+            'Tarley',
+            'Dayne',
+            'Umber',
+            'Valeryon',
+            'Manderly',
+            'Clegane',
+            'Glover',
+            'Karstark'
+        ];
+        return houseNames[id - 1];
+    }
+    /**
+     * @notice Get the fortune for players that input FOMO
+     * @param id uint256
+     * @return fortune string
+     */
+    function getFortuneFOMO(uint256 id) private pure returns (string memory) {
+        string[20] memory houseNames = [
+            'Targaryen',
+            'Lannister',
+            'Stark',
+            'Tyrell',
+            'Baratheon',
+            'Martell',
+            'Tully',
+            'Bolton',
+            'Greyjoy',
+            'Arryn',
+            'Frey',
+            'Mormont',
+            'Tarley',
+            'Dayne',
+            'Umber',
+            'Valeryon',
+            'Manderly',
+            'Clegane',
+            'Glover',
+            'Karstark'
+        ];
+        return houseNames[id - 1];
+    }
+    /**
+     * @notice Get the fortune for players that input ALPHA
+     * @param id uint256
+     * @return fortune string
+     */
+    function getFortuneALPHA(uint256 id) private pure returns (string memory) {
+        string[20] memory houseNames = [
+            'Targaryen',
+            'Lannister',
+            'Stark',
+            'Tyrell',
+            'Baratheon',
+            'Martell',
+            'Tully',
+            'Bolton',
+            'Greyjoy',
+            'Arryn',
+            'Frey',
+            'Mormont',
+            'Tarley',
+            'Dayne',
+            'Umber',
+            'Valeryon',
+            'Manderly',
+            'Clegane',
+            'Glover',
+            'Karstark'
+        ];
+        return houseNames[id - 1];
+    }
+    /**
+     * @notice Get the fortune for players that input KEK
+     * @param id uint256
+     * @return fortune string
+     */
+    function getFortuneKEK(uint256 id) private pure returns (string memory) {
+        string[20] memory houseNames = [
+            'You fren, GMI',
+            'Lannister',
+            'Stark',
+            'Tyrell',
+            'Baratheon',
+            'Martell',
+            'Tully',
+            'Bolton',
+            'Greyjoy',
+            'Arryn',
+            'Frey',
+            'Mormont',
+            'Tarley',
+            'Dayne',
+            'Umber',
+            'Valeryon',
+            'Manderly',
+            'Clegane',
+            'Glover',
+            'Karstark'
+        ];
+        return houseNames[id - 1];
+    }
     function getHouseName(uint256 id) private pure returns (string memory) {
         string[20] memory houseNames = [
             'Targaryen',
@@ -169,7 +284,6 @@ contract VRFD20 is VRFConsumerBaseV2 {
         ];
         return houseNames[id - 1];
     }
-
     modifier onlyOwner() {
         require(msg.sender == s_owner);
         _;

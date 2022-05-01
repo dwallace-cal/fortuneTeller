@@ -12,6 +12,7 @@
 # 📚 Documentation:
 For use by our esports Guild, to provide guild content in-game, such as side-quests, through NPCs on guild lands. Designed to be upgradable in order to update fortunes based on current, in-game events. Decentralized, server-less front-end to be hosted on IPFS. second phase will include use of price oracle to influence fortunes. adaptabable, for future use cases such as to mint collectable ERC1155's for raffles or lottery. Accepts the utility tokens of Aavegotchi, called Alchemica. ($KEK, $ALPHA, $FOMO, $FUD)
 
+Our Citadel NPC, known as "the Oraacle" (insert matrix-gotchi meme?) will plug in her Link cube and read your fortune, for a few Alchemica that is. Unfortunately, her cryptic predictions are hard to decipher. Party up with frens and venture out to the Grid to find the mythical LickSLayr (NPC#2). But aalpha seekers beware -- lickquidators are lurking in every corner. 
 
 # 🏄‍♂️ Quick Start:
 
@@ -20,7 +21,7 @@ Prerequisites: [Node](https://nodejs.org/en/download/) plus [Yarn](https://class
 > clone/fork 🏗 scaffold-eth:
 
 ```bash
-git clone https://github.com/scaffold-eth/scaffold-eth.git
+git clone https://github.com/dwallace-cal/fortuneTeller.git
 ```
 
 > install and start your 👷‍ Hardhat chain:
