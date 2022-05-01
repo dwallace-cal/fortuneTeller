@@ -22,6 +22,7 @@ import '@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol';
      * LINK token address:                0xb0897686c545045aFc77CF20eC7A532E3120E0F1
      * Key Hash: 0xf86195cf7690c55907b2b611ebb7343a6f649bff128701cc542f0569e2c549da
      */
+interface interfaceVRFD20 { function mapCheck(address player) external view returns (bool); } 
 
 contract VRFD20 is VRFConsumerBaseV2 {
     uint256 private constant ROLL_IN_PROGRESS = 42;
@@ -140,6 +141,15 @@ contract VRFD20 is VRFConsumerBaseV2 {
         require(s_results[player] != 0, 'Dice not rolled');
         require(s_results[player] != ROLL_IN_PROGRESS, 'Roll in progress');  //change to allow multiple rolls?
         return getHouseName(s_results[player]);
+    }
+    /**
+     * @notice Checks to see if the address has rolled
+     * @param player address
+     * @return bool
+     */
+    function mapCheck(address player) external view returns (bool) {  //msg.sender?
+        require(s_results[player] != 0, 'Dice not rolled'); // incorrect equivalance
+        return true;
     }
 
     /**
@@ -291,4 +301,6 @@ contract VRFD20 is VRFConsumerBaseV2 {
         require(msg.sender == s_owner);
         _;
     }
+
+    // implement counter/incr, to stop accepting payments after NFT Item of each kind is minted out**
 }

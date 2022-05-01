@@ -14,6 +14,9 @@ For use by our esports Guild, to provide guild content in-game, such as side-que
 
 Our Citadel NPC, known as "the Oraacle" (insert matrix-gotchi meme?) will plug in her Link cube and read your fortune, for a few Alchemica that is. Unfortunately, her cryptic predictions are hard to decipher. Party up with frens and venture out to the Grid to find the mythical LickSLayr (NPC#2). Rumor has it, he can tell us what it all means. But aalpha seekers beware -- lickquidators are lurking in every corner. Those that survive will have the chance to fulfill their quest, and be rewarded for their risk seeking behavior: Soulbound NFT's that allow for certain access rights at Guild outposts, farms, and installations. I hear the Oraacle is known to prefer $KEK...
 
+Beacon ---> proxy for NPC #1 ---> Implementation
+            proxy for NPC #2 ---> ERC721 x4
+
 # 🏄‍♂️ Quick Start:
 
 Prerequisites: [Node](https://nodejs.org/en/download/) plus [Yarn](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/downloads)
