@@ -70,11 +70,18 @@ contract VRFD20 is VRFConsumerBaseV2 {
     mapping(address => uint256) private s_ALPHAresults;
     // map vrf results to KEK rollers
     mapping(address => uint256) private s_KEKresults;
-    // map vrf results to GLTR rollers when live**
-    //mapping(address => uint256) private s_GLTRresults;
+    // map vrf results to GLTR rollers
+    mapping(address => uint256) private s_GLTRresults;
 
     event DiceRolled(uint256 indexed requestId, address indexed roller);
     event DiceLanded(uint256 indexed requestId, uint256 indexed result);
+
+    //Alchemica token addresses
+    address GLTR = 0x3801C3B3B5c98F88a9c9005966AA96aa440B9Afc;
+    address FUD = 0x403E967b044d4Be25170310157cB1A4Bf10bdD0f;
+    address ALPHA = 0x6a3E7C3c6EF65Ee26975b12293cA1AAD7e1dAeD2;
+    address FOMO = 0x44A6e0BE76e1D9620A7F76588e4509fE4fa8E8C8;
+    address KEK = 0x42E5E06EF5b90Fe15F853F59299Fc96259209c5C;
 
     /**
      * @notice Constructor inherits VRFConsumerBaseV2
@@ -251,7 +258,7 @@ contract VRFD20 is VRFConsumerBaseV2 {
         string[20] memory houseNames = [
             'You fren, GMI',
             'If you can handle the grid, the spillover is yours',
-            'Stark',
+            'KEK',
             'Tyrell',
             'Baratheon',
             'Martell',
@@ -271,11 +278,11 @@ contract VRFD20 is VRFConsumerBaseV2 {
             'Karstark'
         ];
         return houseNames[id - 1];
-    } // Repeat for $GLTR when live** 
-    function getHouseName(uint256 id) private pure returns (string memory) {
+    } 
+    function getFortuneGLTR(uint256 id) private pure returns (string memory) {
         string[20] memory houseNames = [
-            'Targaryen',
-            'Lannister',
+            'You are a true buidler, I can tell by your coin',
+            'One might say, a true Chad would tokenize time itself',
             'Stark',
             'Tyrell',
             'Baratheon',
