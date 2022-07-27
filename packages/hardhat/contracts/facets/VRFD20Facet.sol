@@ -77,12 +77,12 @@ contract VRFD20 is VRFConsumerBaseV2 {
     event DiceLanded(uint256 indexed requestId, uint256 indexed result);
 
     //Alchemica token addresses
-    address GLTR = 0x3801C3B3B5c98F88a9c9005966AA96aa440B9Afc;
-    address FUD = 0x403E967b044d4Be25170310157cB1A4Bf10bdD0f;
-    address ALPHA = 0x6a3E7C3c6EF65Ee26975b12293cA1AAD7e1dAeD2;
-    address FOMO = 0x44A6e0BE76e1D9620A7F76588e4509fE4fa8E8C8;
-    address KEK = 0x42E5E06EF5b90Fe15F853F59299Fc96259209c5C;
-
+    IERC20 public GLTRInstance;
+    IERC20 public FUDInstance;
+    IERC20 public ALPHAInstance;
+    IERC20 public FOMOInstance;
+    IERC20 public KEKInstance;
+    
     /**
      * @notice Constructor inherits VRFConsumerBaseV2
      *
@@ -94,6 +94,11 @@ contract VRFD20 is VRFConsumerBaseV2 {
         COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
         s_owner = msg.sender; //hardcode proxy
         s_subscriptionId = subscriptionId;
+        GLTRInstance = 0x3801C3B3B5c98F88a9c9005966AA96aa440B9Afc;
+        FUDInstance = 0x403E967b044d4Be25170310157cB1A4Bf10bdD0f;
+        ALPHAInstance = 0x6a3E7C3c6EF65Ee26975b12293cA1AAD7e1dAeD2;
+        FOMOInstance = 0x44A6e0BE76e1D9620A7F76588e4509fE4fa8E8C8;
+        KEKInstance = 0x42E5E06EF5b90Fe15F853F59299Fc96259209c5C;
     }
 
     /**
@@ -309,5 +314,4 @@ contract VRFD20 is VRFConsumerBaseV2 {
         _;
     }
 
-    // implement counter/incr, to stop accepting payments after NFT Item of each kind is minted out**
 }
